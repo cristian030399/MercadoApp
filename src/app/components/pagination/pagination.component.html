@@ -1,0 +1,10 @@
+<nav aria-label="...">
+    <ul class="pagination pagination-lg">
+        <li class="page-item" *ngIf="pagina != 1">
+            <a class="page-link" aria-disabled="true" (click)="pasarPagina(-1)">Previous</a>
+        </li>
+        <li class="page-item" *ngIf="pagina != totalPaginas && totalPaginas!=0">
+            <a class="page-link" (click)="pasarPagina(1)">Next</a>
+        </li>
+    </ul>
+</nav>

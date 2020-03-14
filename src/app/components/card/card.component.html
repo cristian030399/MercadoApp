@@ -1,0 +1,12 @@
+<div class="contenedor-cards">
+    <div class="card" *ngFor="let producto of items;  let i = index">
+        <div class="img-producto">
+            <img [src]="imagenes[i]" alt="">
+        </div>
+        <div class="contenido-card">
+            <h5>{{producto.title}}</h5>
+            <h6>{{producto.price | currency}}</h6>
+            <p>{{vendedores[i]}}</p>
+        </div>
+    </div>
+</div>

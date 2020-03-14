@@ -1,0 +1,5 @@
+<app-navbar (busqueda)="buscarProductos($event)"></app-navbar>
+<h1 *ngIf="totalPaginas>1">Resultado de la busqueda "{{busqueda}}"</h1>
+<app-card [items]="productos" [imagenes]="imagenes" [vendedores]="vendedores"></app-card>
+<hr *ngIf="totalPaginas>1">
+<app-pagination [totalPaginas]="totalPaginas" (siguientePagina)="buscarProductos(busqueda, $event)"></app-pagination>
